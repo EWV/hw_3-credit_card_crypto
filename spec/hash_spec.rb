@@ -29,7 +29,6 @@ describe 'Test hashing requirements' do
   describe 'Test cryptographic hashing' do
     describe 'Check hashes are consistently produced' do
       # TODO: Check that each card produces the same hash if hashed repeatedly
-      cards.each{|c| c.hash_secure.must_equal c.hash_secure}
       cards.each do |card|
         card.hash_secure.wont_be_nil
         card.hash_secure.wont_equal card.to_s
