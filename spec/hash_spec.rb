@@ -47,7 +47,7 @@ describe 'Test hashing requirements' do
       cards.each do |card|
         card.hash_secure.wont_be_nil
         card.hash_secure.wont_equal card.to_s
-        card.hash_secure.wont_equal card.hash_secure
+        card.hash_secure.wont_equal card.hash
       end
     end
   end
