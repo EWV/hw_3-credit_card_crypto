@@ -38,8 +38,8 @@ describe 'Test hashing requirements' do
 
     describe 'Check for unique hashes' do
       # TODO: Check that each card produces a different hash than other cards
-      hash = cards.map(&:hash_secure)
-      hash.uniq.length.must_equal hash.length
+      hash_secure = cards.map(&:hash_secure)
+      hash_secure.uniq.length.must_equal hash_secure.length
     end
 
     describe 'Check regular hash not same as cryptographic hash' do
