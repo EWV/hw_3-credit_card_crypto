@@ -63,6 +63,12 @@ describe 'Test card info encryption' do
       enc.wont_be_nil
     end
 
+    it 'should return a array size 2' do
+      enc = AesCipher.encrypt(@cc, @aes_key)
+      array = JSON.load(enc)
+      array.size.must_equal 2
+    end
+
     it 'should decrypt text' do
       enc = AesCipher.encrypt(@cc, @aes_key)
       dec = AesCipher.decrypt(enc, @aes_key)
