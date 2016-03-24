@@ -12,4 +12,18 @@ module AesCipher
   def self.decrypt(aes_crypt, key)
     # TODO: decrypt from JSON output (aes_crypt) of encrypt method above
   end
+
+  private 
+
+  def self.sub_byte
+  end
+
+  def self.shift_rows
+  end
+
+  def self.mix_columns
+  end
+
+  def self.add_round_key
+  end
 end
