@@ -53,4 +53,12 @@ describe 'Test card info encryption' do
       dec.must_equal @cc.to_s
     end
   end
+
+  describe 'Using AES ciphers' do
+    it 'should encrypt card information' do
+    end
+
+    it 'should decrypt text' do
+    end
+  end
 end
