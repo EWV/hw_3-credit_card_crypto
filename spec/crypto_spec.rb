@@ -62,6 +62,9 @@ describe 'Test card info encryption' do
     end
 
     it 'should decrypt text' do
+      enc = AesCipher.encrypt(@cc, @key)
+      dec = AesCipher.decrypt(enc, @key)
+      dec.must_equal @cc.to_s
     end
   end
 end
